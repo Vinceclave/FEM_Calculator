@@ -1,0 +1,168 @@
+.calculator-app {
+    width: clamp(290px, calc(100vw - 4em), 380px);
+    margin: 0 2em;
+}
+
+.calculator-header {
+    color: var(--header-output-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5em;
+    padding: var(--space-xs-s) 0;  
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+.content-title h1 {
+    font-size: var(--step-2);
+}
+
+.content-theme {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 130px;
+}
+
+.content-theme h2 {
+    font-size: var(--step--2);
+    text-transform: uppercase;
+}
+.theme-buttons {
+    background: var(--toggle-background);
+    position: relative;
+    border-radius: 2em;
+    padding: 0.12em 0.2em;
+    display: flex;
+    flex-basis: 60px;
+    justify-content: space-between;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+ .theme-number {
+    font-size: var(--step--2);
+    width: 45px;
+    position: absolute;
+    top: -1em;
+    right: 0.5em;
+    display: flex;
+    justify-content: space-between;
+}
+.circle-picker {
+    cursor: pointer;
+    position: absolute;
+    top: 0.12em;
+    left: 0.15em;
+    content: '';   
+    background: var(--total-toggle-key-background);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);    
+    filter: blur(1.5px);
+}
+
+.circle-picker:hover {
+    filter: blur(0.1em);
+}
+
+.theme-buttons > button[type="button"] {
+    cursor: pointer;
+    user-select: none;
+    background: none;
+    border: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.calculator-show-output {
+    color: var(--header-output-text);
+    margin-top: var(--space-3xs-2xs);
+    width: 100%;
+    background: var(--screen-background);
+    height: 100px;
+    border-radius: 0.4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0.5em 0.5em 0.5em 0;
+    gap: 0.5em;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.previous-opperand {
+    font-size: var(--step-0);
+    opacity: 0.9;
+}
+
+.current-opperand {
+    font-size: var(--step-3);
+}
+
+.calculator-keys {
+    width: 100%;
+    padding: var(--space-s);
+    margin-top: 0.5em;
+    background: var(--keypad-background);
+    border-radius: 0.3em;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.num-pad-keys {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
+    align-items: center;
+    gap: 0.5em;
+}
+
+.num-key {
+    cursor: pointer;
+    font-family: var(--league-spartan);
+    font-size: var(--step-2);
+    padding: var(--space-2xs-xs);
+    border: none;
+    border-radius: 0.2em;
+}
+
+.numbers, 
+.dot,
+.operator {
+    background: var(--numpad-key-background);
+    box-shadow: inset 0 -4px 2px var(--numpad-key-shadow);
+    color: var(--number-operator-key-text);
+}
+
+
+
+.reset, .delete {
+    background: var(--del-reset-key-background);
+    color: var(--del-reset-text);
+    box-shadow: inset 0px -4px 3px var(--del-reset-key-shadow) ;
+}
+.numbers:hover, 
+.dot:hover,
+.operator:hover,
+.reset:hover,
+.delete:hover,
+.equal:hover{
+    filter: brightness(1.5);
+}
+
+.reset {
+    grid-column: 1/3;
+}
+
+.equal {
+    background: var(--total-toggle-key-background);
+    color: var(--equal-text);
+    box-shadow: inset 0px -4px 3px var(--total-key-shadow);
+    grid-column: 3/5;
+}
+
+

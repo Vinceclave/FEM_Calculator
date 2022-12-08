@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/theme.css">
+  </head>
+<body>
+  <div class="calculator-app">
+    <div class="calculator-header">
+      <div class="content-title">
+        <h1>calc</h1>
+      </div>
+      <div class="content-theme">
+        <h2>theme</h2>
+        <div class="theme-number">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+        <div class="theme-buttons">
+          <div class="circle-picker"></div>
+          <button type="button" class="theme-btn dark"></button>
+          <button type="button" class="theme-btn light"></button>
+          <button type="button" class="theme-btn colorful"></button>
+        </div>
+      </div>
+    </div>
+    <div class="calculator-show-output">
+      <div class="previous-opperand"></div>
+      <div class="current-opperand"></div>
+    </div>
+    <div class="calculator-keys">
+      <div class="num-pad-keys">
+        <button class="num-key numbers" value="7" >7</button>
+        <button class="num-key numbers" value="8">8</button>
+        <button class="num-key numbers" value="9">9</button>
+        <button class="num-key delete" value="del">DEL</button>
+        <button class="num-key numbers" value="4">4</button>
+        <button class="num-key numbers" value="5">5</button>
+        <button class="num-key numbers" value="6">6</button>
+        <button class="num-key operator" value="+">+</button>
+        <button class="num-key numbers" value="1">1</button>
+        <button class="num-key numbers" value="2">2</button>
+        <button class="num-key numbers" value="3">3</button>
+        <button class="num-key operator" value="-">-</button>
+        <button class="num-key dot" value=".">.</button>
+        <button class="num-key numbers" value="0">0</button>
+        <button class="num-key operator" value="/">/</button>
+        <button class="num-key operator" value="x">x</button>
+        <button class="num-key reset" value="reset">RESET</button>
+        <button class="num-key equal" value="=">=</button>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>  
+</body>
+</html>

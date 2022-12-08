@@ -1,0 +1,67 @@
+html[data-theme="dark"] {
+    /* Background */
+    --main-background: hsl(222, 26%, 31%);
+    --toggle-background: hsl(223, 31%, 20%);
+    --keypad-background: hsl(223, 31%, 20%);
+    --screen-background: hsl(224, 36%, 15%);   
+    /* Keys */
+    --del-reset-key-background: hsl(225, 21%, 49%);
+    --del-reset-key-shadow: hsl(224, 28%, 35%);
+    --total-toggle-key-background: hsl(6, 63%, 50%); 
+    --total-key-shadow: hsl(6, 70%, 34%);
+    --numpad-key-background: hsl(30, 25%, 89%);
+    --numpad-key-shadow: hsl(28, 16%, 65%);
+    /* Text */
+    --header-output-text: hsl(0, 0%, 100%);
+    --number-operator-key-text: hsl(221, 14%, 31%);
+    --del-reset-text: hsl(0, 0%, 100%);
+    --equal-text: hsl(0, 0%, 100%);
+
+    --numpad-hover: hsl(0, 0%, 100%);
+}
+
+html[data-theme="light"] {
+    /* Background */
+    --main-background: hsl(0, 0%, 90%);
+    --toggle-background: hsl(0, 5%, 81%);
+    --keypad-background: hsl(0, 5%, 81%);
+    --screen-background: hsl(0, 0%, 93%);  
+    /* Keys */
+    --del-reset-key-background: hsl(185, 42%, 37%);
+    --del-reset-key-shadow: hsl(185, 58%, 25%);;
+    --total-toggle-key-background: hsl(25, 98%, 40%);; 
+    --total-key-shadow: hsl(25, 99%, 27%);
+    --numpad-key-background: hsl(45, 7%, 89%);
+    --numpad-key-shadow: hsl(35, 11%, 61%);
+    /* Text */
+    --header-output-text: hsl(60, 10%, 19%);
+    --number-operator-key-text: hsl(60, 10%, 19%); 
+    --del-reset-text: hsl(0, 0%, 100%);
+    --equal-text: hsl(0, 0%, 100%);
+
+    
+    --numpad-hover: hsl(0, 0%, 100%);
+}
+
+html[data-theme="colorful"] {
+    /* Background */
+    --main-background: hsl(268, 75%, 9%);
+    --toggle-background: hsl(268, 71%, 12%);
+    --keypad-background: hsl(268, 71%, 12%);
+    --screen-background: hsl(268, 71%, 12%);
+    /* Keys */
+    --del-reset-key-background: hsl(281, 89%, 26%);
+    --del-reset-key-shadow: hsl(285, 91%, 52%);
+    --total-toggle-key-background: hsl(176, 100%, 44%); 
+    --total-key-shadow: hsl(177, 92%, 70%);
+    --numpad-key-background: hsl(268, 47%, 21%);
+    --numpad-key-shadow: hsl(290, 70%, 36%);
+    /* Text */
+    --header-output-text: hsl(52, 100%, 62%);
+    --number-operator-key-text: hsl(52, 100%, 62%); 
+    --del-reset-text: hsl(0, 0%, 100%);
+    --equal-text: hsl(281, 89%, 26%);
+
+    
+    --numpad-hover: hsl(285, 91%, 52%);
+}

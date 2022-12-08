@@ -1,0 +1,72 @@
+const themePicker = document.querySelectorAll(".theme-btn")
+const circleToggle = document.querySelector(".circle-picker")
+const calculatorOutput = document.querySelector(".calculator-show-output")
+const calculatorKeyPad = document.querySelector(".calculator-keys")
+const numbers = document.querySelectorAll(".number")
+const deleteOutput = document.querySelector(".delete")
+const resetOutput = document.querySelector(".reset")
+const totalOutput = document.querySelector(".equal")
+
+
+
+
+// Theme calculator toggle
+
+    themePicker.forEach(buttons => {
+        buttons.addEventListener('click', function() {
+            if (this.classList.contains("dark-mode")) {
+                document.querySelector(".circle-picker").style.left = "0.15em"
+                darkMode()
+            } else if (this.classList.contains("light-mode")) {
+                document.querySelector(".circle-picker").style.left = "0.66em"
+                lightMode()
+            } else if (this.classList.contains("colorful-mode")) {        
+                document.querySelector(".circle-picker").style.left = "1.2em"
+                colorfulMode()
+            }
+        })
+    })
+
+
+// Theme 1
+function darkMode() {
+    document.querySelector("body").style.background = "var(--very-dark-desaturated-blue-main)"
+    document.querySelector(".calculator-header").style.color = "var(--white)"
+    document.querySelector(".circle-picker").style.background = "var(--dark-orange-key-shadow)"
+    document.querySelector(".calculator-show-output").style.cssText = 'color: var( --white); background: var(--very-dark-desaturated-blue-toggle-keypad)'
+    document.querySelector(".calculator-keys").style.background = "var(--very-dark-desaturated-blue-toggle-keypad)"
+    for(let i = 0; i < numbers.length; i++) {
+        numbers[i].style.cssText = 'color: var(); background: var()'
+    }
+    document.querySelector(".delete").style.cssText = 'background:var(--desaturated-dark-blue-key-bg); box-shadow:inset  0 -4px 2px var( --desaturated-dark-blue-key-shadow)'
+    document.querySelector(".reset").style.cssText = 'background:var(--desaturated-dark-blue-key-bg); box-shadow:inset  0 -4px 2px var( --desaturated-dark-blue-key-shadow)'
+    document.querySelector(".equal").style.cssText = 'background:var(--red-bg-toggle); box-shadow: inset 0 -4px 2px var()'
+}
+
+// Theme 2
+function lightMode() {
+    document.querySelector("body").style.background = "var(--light-gray-main)"
+    document.querySelector(".calculator-header").style.color = "var(--very-dark-grayish-yellow)"
+    document.querySelector(".calculator-show-output").style.cssText = 'color: var(--very-dark-grayish-yellow); background: var(--very-light-gray-screen-bg)'
+    document.querySelector(".calculator-keys").style.background = "var(--grayish-red-toggle-keypad)"
+    for(let i = 0; i < numbers.length; i++) {
+        numbers[i].style.cssText = 'color: var(); background: var( --light-grayish-yellow-key-bg); box-shadow: inset 0 -4px 2px var(--dark-grayish-orange-key-shadow)'
+    }
+    document.querySelector(".delete").style.cssText = 'background: var(--dark-moderate-cyan-key-bg); box-shadow:inset  0 -4px 2px var(--very-dark-cyan-key-shadow)'
+    document.querySelector(".reset").style.cssText = 'background: var(--dark-moderate-cyan-key-bg); box-shadow:inset  0 -4px 2px var(--very-dark-cyan-key-shadow)'
+    document.querySelector(".equal").style.cssText = 'background:var(--red-bg-toggle); box-shadow: inset  0 -4px 2px var(--dark-red-key-shadow)'
+}
+
+// Theme 3
+function colorfulMode() {
+    document.querySelector("body").style.background = "var(--very-dark-violet-main)"
+    document.querySelector(".calculator-header").style.color = "var(--light-yellow)"
+    document.querySelector(".calculator-show-output").style.cssText = 'color: var(--light-yellow); background: var(--very-dark-violet-toggle-key-screen-bg)'
+    document.querySelector(".calculator-keys").style.background = "var(--very-dark-violet-toggle-key-screen-bg)"
+    for(let i = 0; i < numbers.length; i++) {
+        numbers[i].style.cssText = 'color: var(--light-yellow); background: var( --very-dark-violet-key-bg); box-shadow: inset 0 -4px 3px var(--dark-magenta-key-shadow)'
+    }
+    document.querySelector(".delete").style.cssText = 'background:var(--dark-violet-key-bg); box-shadow:inset  0 -4px 2px var(--vivid-magenta-key-shadow)'
+    document.querySelector(".reset").style.cssText = 'background:var(--dark-violet-key-bg); box-shadow:inset  0 -4px 2px var(--vivid-magenta-key-shadow)'
+    document.querySelector(".equal").style.cssText = 'background:var(--pure-cyan-key-bg-toggle); box-shadow: inset 0 -4px 2px var(--soft-cyan-key-shadow)'
+}
